@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <FrameLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/fragment_principal"
+        android:background="@drawable/fundomenuprincipal"
+        tools:context=".library.PrincipalFragment">
+
+            <TextView
+                android:id="@+id/textView_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="TELA PRINCIPAL"
+                android:textSize="15sp"
+                android:textColor="@color/white"
+                android:textAllCaps="true"
+                android:textStyle="bold" />
+
+    </FrameLayout>

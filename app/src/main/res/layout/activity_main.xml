@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coordinatorLayoutMainActivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fundomenuprincipal"
+    tools:context=".MainActivity">
+
+    <FrameLayout
+        android:id="@+id/frame_layout_geral"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="0dp"
+        android:elevation="1dp"
+        android:visibility="visible">
+
+        <fragment
+            android:id="@+id/fragment_show_principal"
+            android:name="com.lglf77.exemplomenu_one.library.PrincipalFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/linear_container_buttons"
+        android:layout_width="match_parent"
+        android:layout_height="78dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="0dp"
+        android:background="@android:color/transparent"
+        android:elevation="9dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <LinearLayout
+            android:id="@+id/linear_container_inside_chat"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="11dp"
+            android:layout_weight="0.333"
+            android:elevation="3dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/linear_bg_circle_left"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:background="@drawable/oval_chat"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <com.sdsmdg.harjot.vectormaster.VectorMasterView
+                    android:id="@+id/btn_icon_vector_chat"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="8dp"
+                    android:scaleX="0.8"
+                    android:scaleY="0.8"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:vector_src="@drawable/ic_google_plus_box" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linear_container_inside_principal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="11dp"
+            android:layout_weight="0.334"
+            android:elevation="3dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/linear_bg_circle_center"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:background="@drawable/oval"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <com.sdsmdg.harjot.vectormaster.VectorMasterView
+                    android:id="@+id/btn_icon_vector_principal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="8dp"
+                    android:scaleX="0.8"
+                    android:scaleY="0.8"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:vector_src="@drawable/ic_airport_shuttle_black_24dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linear_container_inside_shopping"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="11dp"
+            android:layout_weight="0.333"
+            android:elevation="3dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/linear_bg_circle_right"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:background="@drawable/oval_yellow"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <com.sdsmdg.harjot.vectormaster.VectorMasterView
+                    android:id="@+id/btn_icon_vector_shopping"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="8dp"
+                    android:scaleX="0.7"
+                    android:scaleY="0.7"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:vector_src="@drawable/ic_shopping_cart_black_24dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <com.lglf77.exemplomenu_one.library.CurvedBottomNavigationView
+            android:id="@+id/curved_bottom_navigation_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginBottom="0dp"
+            android:elevation="11dp" />
+
+    </LinearLayout>
+
+</RelativeLayout>
